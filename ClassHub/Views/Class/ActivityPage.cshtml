@@ -1,0 +1,140 @@
+﻿@model ClassHub.Models.ActivityPageData
+@{
+    ViewBag.Title = "Activity Page";
+    ViewBag.ClassName = Model.activity.Class.name;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Activity</title>
+
+	
+	<script type="text/javascript" src="~/Scripts/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="~/Scripts/activityView.js"></script>
+	
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+   <link href='fonts/font1.css' rel='stylesheet' type='text/css'>
+    <link href='fonts/font2.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="~/Content/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/activityView.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" style="background-color: #0db3c7;">
+	
+
+	
+	<div class="container" id="contentView">
+		
+			
+		<div class="panel panel-default">	
+				
+			<div class="panel-body">		
+				<div class="row">
+					<h2 class="list-group-item-heading col-md-11">@Model.activity.heading</h2>
+				
+					<Button class="fa fa-2x fa-remove removeButton"></Button>
+				
+				</div>
+				<div class="row">
+					<p class="col-xs-12 content" > @Model.activity.desc</p>
+				
+				</div>
+                @if(Model.activity.submission_date!=null){
+                <div class="row">
+					<p class="col-xs-2 ">Submission Date: </p><p class="col-xs-10 content" > @Model.activity.submission_date</p>
+				
+				</div>
+                }
+                @if(Model.activity.submission_date!=null){
+                <div class="row">
+					<p class="col-xs-2 ">Time Deadline: </p><p class="col-xs-10 content" > @Model.activity.time_deadline</p>
+				
+				</div>
+                }
+                @if(Model.activity.file_url!=null){
+                <div class="row">
+					<p class="col-xs-2 ">File Link:</p><p class="col-xs-10 content" > @Model.activity.file_url</p>
+				
+				</div>
+                }
+				<div class="row">
+					
+					<small class="col-xs-4"> @Model.activity.create_date </small>
+					<small class="col-xs-1 pull-right">@Model.activity.type.ToUpper()  </small>
+							
+				</div>
+			</div>			
+		</div>			
+				
+		<div class="panel panel-default">	
+				
+			<div class="panel-heading">
+			<form class="input-group">	
+				<textarea type="textarea" class="form-control" placeholder="Add a comment" id="textBox"></textarea>
+				<span class="input-group-btn">
+					<input type="button" value="post" class="btn btn-default" id="addComment"/>
+				</span>
+				</form>
+			</div>	
+			<div class="panel-body">		
+				<ul class="list-group" id="comments">
+                    @foreach(var v in Model.comments){
+					<li class="listItem list-group-item">
+					
+						
+						<div class="row">
+							<h3 class="list-group-item-heading col-md-11 commentName">@v.username</h3>
+						
+							<button title="Remove Comment" class="fa fa-x fa-remove removeButton"></button>
+						
+						</div>
+						<div class="row">
+							<p class="col-xs-12 commentText">@v.comment.comment1 </p>
+						
+						</div>
+						<div class="row">
+							<small class="col-xs-4"> @v.comment.created </small>
+
+							<small class="pull-right"> Student</small>
+						</div>
+							
+						
+					</li>
+                    }
+				<ul>
+			</div>			
+		</div>		
+			
+	
+	</div>
+	
+	
+	
+</body>
+
+
+</html>

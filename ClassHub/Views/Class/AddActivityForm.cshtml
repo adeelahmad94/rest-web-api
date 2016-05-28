@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Add Activity</title>
+<link rel="stylesheet" type="text/css" href="~/Content/forms/view.css" media="all">
+<script type="text/javascript" src="~/Scripts/forms/view.js"></script>
+<script type="text/javascript" src="~/Scripts/forms/calendar.js"></script>
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="~/images/forms/top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Add Activity</a></h1>
+		<form id="form_1131077" class="appnitro" enctype="multipart/form-data" method="post" action="">
+					<div class="form_description">
+			<h2>Add Activity</h2>
+			<p>enter your activity details</p>
+		</div>						
+			<ul >
+			
+					<li id="li_7" >
+		<label class="description" for="element_7">Activity Name </label>
+		<div>
+			<input id="element_7" name="element_7" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div><p class="guidelines" id="guide_7"><small>enter name of activity</small></p> 
+		</li>		<li id="li_11" >
+		<label class="description" for="element_11">Activity Type </label>
+		<div>
+		<select class="element select medium" id="element_11" name="element_11"> 
+			<option value="" selected="selected"></option>
+<option value="1" >Assignment</option>
+<option value="2" >Quiz</option>
+<option value="3" >Lab</option>
+<option value="4" >Other...</option>
+
+		</select>
+		</div><p class="guidelines" id="guide_11"><small>select type</small></p> 
+		</li>		<li id="li_8" >
+		<label class="description" for="element_8">Time Deadline </label>
+		<span>
+			<input id="element_8_1" name="element_8_1" class="element text " size="2" type="text" maxlength="2" value=""/> : 
+			<label>HH</label>
+		</span>
+		<span>
+			<input id="element_8_2" name="element_8_2" class="element text " size="2" type="text" maxlength="2" value=""/> : 
+			<label>MM</label>
+		</span>
+		<span>
+			<input id="element_8_3" name="element_8_3" class="element text " size="2" type="text" maxlength="2" value=""/>
+			<label>SS</label>
+		</span>
+		<span>
+			<select class="element select" style="width:4em" id="element_8_4" name="element_8_4">
+				<option value="AM" >AM</option>
+				<option value="PM" >PM</option>
+			</select>
+			<label>AM/PM</label>
+		</span><p class="guidelines" id="guide_8"><small>enter time deadline</small></p> 
+		</li>		<li id="li_9" >
+		<label class="description" for="element_9">Due Date </label>
+		<span>
+			<input id="element_9_1" name="element_9_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_9_1">MM</label>
+		</span>
+		<span>
+			<input id="element_9_2" name="element_9_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_9_2">DD</label>
+		</span>
+		<span>
+	 		<input id="element_9_3" name="element_9_3" class="element text" size="4" maxlength="4" value="" type="text">
+			<label for="element_9_3">YYYY</label>
+		</span>
+	
+		<span id="calendar_9">
+			<img id="cal_img_9" class="datepicker" src="~/images/calendar.gif" alt="Pick a date.">	
+		</span>
+		<script type="text/javascript">
+			Calendar.setup({
+			inputField	 : "element_9_3",
+			baseField    : "element_9",
+			displayArea  : "calendar_9",
+			button		 : "cal_img_9",
+			ifFormat	 : "%B %e, %Y",
+			onSelect	 : selectDate
+			});
+		</script>
+		<p class="guidelines" id="guide_9"><small>enter due date of submission</small></p> 
+		</li>		<li id="li_6" >
+		<label class="description" for="element_6">Description </label>
+		<div>
+			<textarea id="element_6" name="element_6" class="element textarea medium"></textarea> 
+		</div><p class="guidelines" id="guide_6"><small>enter description/details of activity</small></p> 
+		</li>		<li id="li_10" >
+		<label class="description" for="element_10">Upload a File </label>
+		<div>
+			<input id="element_10" name="element_10" class="element file" type="file"/> 
+		</div> <p class="guidelines" id="guide_10"><small>upload content archive</small></p> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="1131077" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>	
+		<div id="footer">
+	 <p>© 2016 Classhub. All Rights Reserved </p>
+		</div>
+	</div>
+	<img id="bottom" src="~/images/forms/bottom.png" alt="">
+	</body>
+</html>

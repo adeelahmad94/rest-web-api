@@ -1,0 +1,225 @@
+﻿@model ClassHub.Models.ClassPageData
+@{
+    ViewBag.Title = "Class Page";
+    ViewBag.UserName = Model.username;
+    ViewBag.ClassName = Model.classInfo.name;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Class Page</title>
+
+		<script type="text/javascript" src="~/Scripts/jquery-2.1.4.js"></script>
+		
+	<script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+	
+	<script type="text/javascript" src="~/Scripts/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="~/Scripts/classScript.js"> </script>	
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+	<link href='~/Content/font1.css' rel='stylesheet' type='text/css'>
+    <link href='~/Content/font2.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="~/Content/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Content/classpage.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" style="background-color: #0db3c7;">
+	
+
+	
+	<div class="container" id="contentTab">
+		<ul class="list-group" style="list-style: none; padding: 20px;">
+			@foreach(var content in Model.content){
+            <li class="listItem">
+			
+				<a href="@Url.Action("ActivitPage","Class")" class="list-group-item" target="_blank">
+					<div class="row">
+						<h2 class="list-group-item-heading col-md-11">@content.heading</h2>
+					
+						<i class="fa fa-2x fa-unchecked text-primary col-md-1"></i>
+					
+					</div>
+					<div class="row">
+						<p class="col-xs-12"> @content.desc</p>
+					    
+					</div>
+                    
+					<div class="row">
+						<small class="col-xs-4"> @content.create_date </small>
+					</div>
+					
+				</a>
+			</li>
+   }
+             @if (Model.content.Count == 0) { 
+                <h3> No Activity here</h3>
+            }
+			
+		</ul>
+	</div>
+	
+	<div class="container" id="assignmentTab">
+		<ul class="list-group" style="list-style: none; padding: 20px;">
+			@foreach(var content in Model.assignments){
+            <li class="listItem">
+			
+				<a href="@Url.Action("ActivitPage","Class")" class="list-group-item" target="_blank">
+					<div class="row">
+						<h2 class="list-group-item-heading col-md-11">@content.heading</h2>
+					
+						<i class="fa fa-2x fa-unchecked text-primary col-md-1"></i>
+					
+					</div>
+					<div class="row">
+						<p class="col-xs-12"> @content.desc</p>
+					    
+					</div>
+                    
+					<div class="row">
+						<small class="col-xs-4"> @content.create_date </small>
+					</div>
+					
+				</a>
+			</li>
+   }
+             @if (Model.assignments.Count == 0) { 
+                <h3> No Activity here</h3>
+            }
+			
+		</ul>
+	</div>
+	
+	<div class="container" id="quizTab">
+		<ul class="list-group" style="list-style: none; padding: 20px;">
+			@foreach(var content in Model.quizzes){
+            <li class="listItem">
+			
+				<a href="@Url.Action("ActivitPage","Class")" class="list-group-item" target="_blank">
+					<div class="row">
+						<h2 class="list-group-item-heading col-md-11">@content.heading</h2>
+					
+						<i class="fa fa-2x fa-unchecked text-primary col-md-1"></i>
+					
+					</div>
+					<div class="row">
+						<p class="col-xs-12"> @content.desc</p>
+					    
+					</div>
+                    
+					<div class="row">
+						<small class="col-xs-4"> @content.create_date </small>
+					</div>
+					
+				</a>
+			</li>
+   } @if (Model.content.Count == 0) { 
+                <h3> No Activity here</h3>
+            }
+			
+		</ul>
+	</div>
+	
+	<div class="container" id="otherTab">
+		<ul class="list-group" style="list-style: none; padding: 20px;">
+			@foreach(var content in Model.other){
+            <li class="listItem">
+			
+				<a href="@Url.Action("ActivitPage","Class")" class="list-group-item" target="_blank">
+					<div class="row">
+						<h2 class="list-group-item-heading col-md-11">@content.heading</h2>
+					
+						<i class="fa fa-2x fa-unchecked text-primary col-md-1"></i>
+					
+					</div>
+					<div class="row">
+						<p class="col-xs-12"> @content.desc</p>
+					    
+					</div>
+                    
+					<div class="row">
+						<small class="col-xs-4"> @content.create_date </small>
+					</div>
+					
+				</a>
+			</li>
+   }
+		
+            @if (Model.other.Count == 0) { 
+                <h3> No Activity here</h3>
+            }	
+		</ul>
+	</div>
+	<div class="container" id="aboutTab">
+		<div class="panel paneldefault inline">
+			<h3 > Created By: </h3> <p id="creator"> @Model.classCreator</p>
+		</div>
+		<div class="panel panel-default">
+		
+			<div class="panel-heading">
+				Description
+			</div>
+			<div class="panel-body">
+				<p id="description">@Model.classInfo.desc</p>
+			</div>
+            <div class="panel-heading">
+				Institution
+			</div>
+			<div class="panel-body">
+				<p id="instituion">@Model.classInfo.institution</p>
+			</div>
+            <div class="panel-heading">
+				Department
+			</div>
+			<div class="panel-body">
+				<p id="department">@Model.classInfo.dept</p>
+			</div>
+		</div>
+	</div>
+	
+	<div id="sureDialog" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Leave Class</h4>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to leave this class?<p>
+      </div>
+      <div class="modal-footer">
+		<button id="leaveClass" type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+	
+</body>
+
+
+</html>

@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @{
+        if(ViewBag.Title == "Class Hub"){
+            <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Class Hub</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#login">Login/SignUp</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+        
+        }
+        else if(ViewBag.Title == "Teacher Dashboard"){
+               <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Class Hub</a>
+			
+				
+				 
+            </div>
+
+			
+				 <div class="pull-right dropdown">
+					
+					<div class="btn-group dropdownMenu">
+					  <p class="btn btn-dropdown" href="#"><i class="fa fa-user fa-fw"></i> @ViewBag.UserName</p>
+						  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+							<span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
+						  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="@Url.Action("EditProfileForm","Class")"><i class="fa fa-pencil fa-fw"></i>Edit Profile</a></li>
+						<li><a href="@Url.Action("addClassForm","Class")"><i class="fa fa-trash-o fa-fw"></i>Add Class</a></li>
+						
+						<li class="divider"></li>
+						<li><a href="@Url.Action("Index","Class")"><i class="fa fa-ban fa-fw"></i>Logout</a></li>
+						
+						
+					  </ul>
+					</div>
+					
+					
+				 </div>
+			
+            
+            <!-- /.navbar-collapse -->
+			
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+        }
+        if(ViewBag.Title =="Student Dashboard"){
+            <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Class Hub</a>
+			
+				
+				 
+            </div>
+
+			<div class="col-lg-8" id="searchDiv">
+					<form class="input-group" action="@Url.Action("SearchResults","Class")" method="post">
+					  <input type="text" class="form-control" placeholder="Search for..." name="searchquery" id="searchBox">
+					  <span class="input-group-btn">
+						<button class="btn btn-default" type="submit" >Go!</button>
+					  </span>
+					</form><!-- /input-group -->
+					
+				 </div>
+				 
+			<div class="pull-right dropdown">
+					
+				<div class="btn-group dropdownMenu">
+				  <p class="btn btn-dropdown" href="#"><i class="fa fa-user fa-fw"></i>@ViewBag.UserName</p>
+					  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+						<span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
+					  </a>
+				  <ul class="dropdown-menu">
+					<li><a href="@Url.Action("EditProfileForm","Class")"><i class="fa fa-pencil fa-fw"></i>Edit Profile</a></li>
+					
+					<li class="divider"></li>
+					<li><a href="@Url.Action("Index","Class")"><i class="fa fa-ban fa-fw"></i>Logout</a></li>
+					
+					
+				  </ul>
+				</div>
+					
+					
+			</div>
+            
+            <!-- /.navbar-collapse -->
+			
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+        }
+        if(ViewBag.Title == "Class Page"){
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="adminDashboard.html">Class Hub</a>
+				<a class="navbar-text" style="color:white; margin-bottom: 0px;" href="@Url.Action("ClassPage","Class")"> @ViewBag.ClassName </a>
+				 
+            </div>
+
+			
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav-tabs navbar-nav">
+                    <li class="active" id="contentLink" >
+                        <a   href="#">Class Content </a>	
+                    </li>
+                    <li id="assignmentLink">
+                        <a  href="#">Assignments </a>
+                    </li>
+                    <li id="quizLink" >
+                        <a  href="#">Quizzes </a>
+                    </li>
+                    <li id="otherLink">
+                        <a   href="#">Other</a>
+                    </li>
+					<li id="aboutLink">
+                        <a   href="#">About</a>
+                    </li>
+					
+                </ul>
+				
+				<div class="pull-right dropdown">
+					
+				<div class="btn-group dropdownMenu">
+				  <p class="btn btn-dropdown" href="#"><i class="fa fa-user fa-fw"></i> @ViewBag.UserName</p>
+					  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+						<span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
+					  </a>
+				  <ul class="dropdown-menu">
+                      @if(ViewBag.UserType == "Student"){
+					<li><a  href="#sureDialog" data-toggle="modal" data-target="#sureDialog"><i class="fa fa-remove fa-fw"></i>Leave Class</a></li>
+                      }
+                      else{
+					<li><a href="#"><i class="fa fa-plus fa-fw"></i>Add Activity</a></li>
+					<li><a href="#"><i class="fa fa-pencil fa-fw"></i>Edit Class</a></li>
+                      
+					<li><a href="@Url.Action("ManageRequests","Class")"><i class="fa fa-trash-o fa-fw" ></i>Manage Requests</a></li>
+					<li class="divider"></li>
+                      }
+					<li><a href="@Url.Action("Index","Class")"><i class="fa fa-ban fa-fw"></i>Logout</a></li>
+					
+				  </ul>
+				</div>
+					
+					
+			</div>
+            </div>
+			
+			
+            <!-- /.navbar-collapse -->
+			
+        </div>
+		
+        <!-- /.container-fluid -->
+    </nav>
+        }
+        else if(ViewBag.Title == "Activity Page"){
+            <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Class Hub</a>
+				<a class="navbar-text" style="color:white; margin-bottom: 0px;" href="@Url.Action("ClassPage","Class")"> @ViewBag.ClassName</a>
+				 
+            </div>
+
+			
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            
+            <!-- /.navbar-collapse -->
+			
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+        }
+        else if(ViewBag.Title == "Manage Requests"){
+            	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Class Hub</a>
+				<a class="navbar-text" style="color:white; margin-bottom: 0px;" href="@Url.Action("ClassPage","Class")"> @ViewBag.ClassName</a>
+				
+				 
+            </div>
+
+			
+				 
+			
+            
+            <!-- /.navbar-collapse -->
+			
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+        }
+        if(ViewBag.Title == "Search Results"){
+            <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Class Hub</a>
+			
+				
+				 
+            </div>
+
+			<div class="col-lg-8" id="searchDiv" >
+					<form class="input-group" action="@Url.Action("SearchResults","Class")" method="post">
+					  <input type="text" class="form-control" placeholder="Search for..." name="searchquery" id="searchBox" value="@ViewBag.searchquery">
+					  <span class="input-group-btn">
+						<button class="btn btn-default" type="submit" >Go!</button>
+					  </span>
+					</form><!-- /input-group -->
+					
+			</div>
+				 
+			
+            
+            <!-- /.navbar-collapse -->
+			
+			
+			<div class="pull-right dropdown">
+					
+				<div class="btn-group dropdownMenu">
+				  <p class="btn btn-dropdown" href="#"><i class="fa fa-user fa-fw"></i> ViewBag.UserName</p>
+					  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+						<span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
+					  </a>
+				  <ul class="dropdown-menu">
+					<li><a href="#"><i class="fa fa-pencil fa-fw"></i>Edit Profile</a></li>
+					
+					<li class="divider"></li>
+					<li><a href="@Url.Action("Index","Class")"><i class="fa fa-ban fa-fw"></i>Logout</a></li>
+					
+					
+				  </ul>
+				</div>
+					
+					
+			</div>
+        <!-- /.container-fluid -->
+		</div>
+    </nav>
+        }
+   }
+
+
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+    <footer>
+        <center>    <p>Copyright © 2016 ClassHub™, All Rights Reserved.</p></center>
+    </footer>
+</body>
+</html>

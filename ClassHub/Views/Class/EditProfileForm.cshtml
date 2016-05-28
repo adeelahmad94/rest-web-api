@@ -1,0 +1,81 @@
+﻿@model ClassHub.Models.User
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Edit profile</title>
+<link rel="stylesheet" type="text/css" href="~/Content/forms/view.css" media="all">
+<script type="text/javascript" src="~/Scripts/forms/view.js"></script>
+
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="~/images/forms/top.png" alt=""/>
+	<div id="form_container">
+	
+		<h1><a>Edit profile</a></h1>
+        @using (Html.BeginForm("updateProfile", "Class", FormMethod.Post, new {  @class="login-form", id="form_1131077"}))
+        {
+				                   
+		@*<form id="form_1131077" class="appnitro"  method="post" action="@Url.Action("updateProfile","Class")">*@
+					<div class="form_description">
+			<h2>Edit profile</h2>
+			<p>Update your information</p>
+		</div>						
+			<ul >
+			
+					<li id="li_5" >
+
+                        @Html.Label("Name", new {@class="description", @for="element_5"})
+		@*<label class="description" for="element_5">Name </label>*@
+		<span>
+            @Html.TextBoxFor(x=>x.fname, null, new{  id="fname", placeholder="FIrst Name...", @class="element text", maxxlength="255", size="15", value=Model.fname})
+			@*<input id="fname" name= "fname" class="element text" maxlength="255" size="15" value="@Model.fname"/>*@
+            @Html.LabelFor(x=>x.fname)
+			@*<label>First</label>*@
+		</span>
+		<span>
+            @Html.TextBoxFor(x=>x.lname, null, new{  id="lname", placeholder="Last Name...", @class="element text", maxxlength="255", size="15", value=Model.lname})
+			@*<input id="lname" name= "lname" class="element text" maxlength="255" size="15" value="@Model.lname"/>*@
+            @Html.LabelFor(x=>x.lname)
+			@*<label>Last</label>*@
+		</span> 
+		</li>		<li id="li_4" >
+
+            @Html.LabelFor(x=>x.email, new {@class="description", @for="email"})
+		@*<label class="description" for="element_4">Email </label>*@
+		<div>
+            @Html.TextBoxFor(x=>x.email, null, new{  type="email",id="email", placeholder="Email...", @class="element text medium", maxxlength="255",  value=Model.email})
+			@*<input id="email" name="email" class="element text medium" type="text" maxlength="255" value="@Model.email"/> *@
+		</div> 
+		</li>		<li id="li_2" >
+             @Html.LabelFor(x=>x.password, new {@class="description", @for="pass"})
+		@*<label class="description" for="element_2">Password </label>*@
+		<div>
+            @Html.TextBoxFor(x=>x.password, null, new{ type="password", id="pass", placeholder="Password...", @class="element text medium", maxxlength="255",  value=Model.password})
+			@*<input id="pass" name="pass" class="element text medium" type="text" maxlength="255" value="@Model.password"/> *@
+		</div> 
+		</li>		<li id="li_3" >
+             @Html.Label("confirm password", new {@class="description", @for="cpass"})
+		@*<label class="description" for="element_3">Confirm Password </label>*@
+		<div>
+           @Html.TextBox("cpass", null, new{  id="cpass", placeholder="Confirm Password", @class="element text medium", maxxlength="255",  value=Model.password})
+			@*<input id="cpass" name="cpass" class="element text medium" type="text" maxlength="255" value="@Model.password"/> *@
+		</div> 
+		</li>		
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="1131077" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		@*</form>*@
+            }
+		<div id="footer">
+	 <p>© 2016 Classhub. All Rights Reserved </p>
+		</div>
+	</div>
+	<img id="bottom" src="~/images/forms/bottom.png" alt="">
+	</body>
+</html>

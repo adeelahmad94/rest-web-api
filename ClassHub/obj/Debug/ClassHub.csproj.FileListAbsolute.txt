@@ -1,0 +1,78 @@
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\ClassHub.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\ClassHub.pdb
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\Antlr3.Runtime.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\EntityFramework.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\Microsoft.Web.Infrastructure.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\Newtonsoft.Json.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\System.Web.Mvc.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\System.Web.Optimization.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\System.Web.Providers.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\System.Web.Razor.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\System.Web.WebPages.Deployment.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\System.Web.WebPages.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\System.Web.WebPages.Razor.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\WebGrease.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\EntityFramework.xml
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\Newtonsoft.Json.xml
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\System.Web.Mvc.xml
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\System.Web.Razor.xml
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\System.Web.WebPages.xml
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\System.Web.WebPages.Deployment.xml
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\bin\System.Web.WebPages.Razor.xml
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\obj\Debug\ClassHub.dll
+c:\users\vickyzia\documents\visual studio 2012\Projects\ClassHub\ClassHub\obj\Debug\ClassHub.pdb
+C:\Users\Vickyzia\documents\visual studio 2012\Projects\Classhub\ClassHub\obj\Debug\ClassHub.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\ClassHub.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\ClassHub.pdb
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\Antlr3.Runtime.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\EntityFramework.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\Microsoft.Web.Infrastructure.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\Newtonsoft.Json.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Net.Http.Formatting.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.Http.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.Http.WebHost.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.Mvc.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.Optimization.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.Providers.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.Razor.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.WebPages.Deployment.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.WebPages.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.WebPages.Razor.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\WebGrease.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\EntityFramework.xml
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\Newtonsoft.Json.xml
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Net.Http.Formatting.xml
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.Http.xml
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.Http.WebHost.xml
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.Mvc.xml
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.Razor.xml
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.WebPages.xml
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.WebPages.Deployment.xml
+\\Mac\Home\Desktop\ClassHub\ClassHub\bin\System.Web.WebPages.Razor.xml
+\\Mac\Home\Desktop\ClassHub\ClassHub\obj\Debug\ClassHub.dll
+\\Mac\Home\Desktop\ClassHub\ClassHub\obj\Debug\ClassHub.pdb
+\\Mac\Home\Desktop\ClassHub\ClassHub\obj\Debug\ClassHub.csprojResolveAssemblyReference.cache
+E:\ClassHub\ClassHub\bin\ClassHub.dll
+E:\ClassHub\ClassHub\bin\ClassHub.pdb
+E:\ClassHub\ClassHub\bin\Antlr3.Runtime.dll
+E:\ClassHub\ClassHub\bin\EntityFramework.dll
+E:\ClassHub\ClassHub\bin\Microsoft.Web.Infrastructure.dll
+E:\ClassHub\ClassHub\bin\Newtonsoft.Json.dll
+E:\ClassHub\ClassHub\bin\System.Web.Mvc.dll
+E:\ClassHub\ClassHub\bin\System.Web.Optimization.dll
+E:\ClassHub\ClassHub\bin\System.Web.Providers.dll
+E:\ClassHub\ClassHub\bin\System.Web.Razor.dll
+E:\ClassHub\ClassHub\bin\System.Web.WebPages.Deployment.dll
+E:\ClassHub\ClassHub\bin\System.Web.WebPages.dll
+E:\ClassHub\ClassHub\bin\System.Web.WebPages.Razor.dll
+E:\ClassHub\ClassHub\bin\WebGrease.dll
+E:\ClassHub\ClassHub\bin\EntityFramework.xml
+E:\ClassHub\ClassHub\bin\Newtonsoft.Json.xml
+E:\ClassHub\ClassHub\bin\System.Web.Mvc.xml
+E:\ClassHub\ClassHub\bin\System.Web.Razor.xml
+E:\ClassHub\ClassHub\bin\System.Web.WebPages.xml
+E:\ClassHub\ClassHub\bin\System.Web.WebPages.Deployment.xml
+E:\ClassHub\ClassHub\bin\System.Web.WebPages.Razor.xml
+E:\ClassHub\ClassHub\obj\Debug\ClassHub.csprojResolveAssemblyReference.cache
+E:\ClassHub\ClassHub\obj\Debug\ClassHub.dll
+E:\ClassHub\ClassHub\obj\Debug\ClassHub.pdb

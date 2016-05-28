@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="dbEntities">
+    <EntitySetMapping Name="Activities">
+      <EntityTypeMapping TypeName="dbModel.Activity">
+        <MappingFragment StoreEntitySet="Activity">
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="heading" ColumnName="heading" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="cid" ColumnName="cid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="time_deadline" ColumnName="time_deadline" />
+          <ScalarProperty Name="submission_date" ColumnName="submission_date" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="file_url" ColumnName="file_url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classes">
+      <EntityTypeMapping TypeName="dbModel.Class">
+        <MappingFragment StoreEntitySet="Class">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="instructor" ColumnName="instructor" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="institution" ColumnName="institution" />
+          <ScalarProperty Name="dept" ColumnName="dept" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="created" ColumnName="created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="dbModel.Comment">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="act" ColumnName="act" />
+          <ScalarProperty Name="comment1" ColumnName="comment" />
+          <ScalarProperty Name="created" ColumnName="created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enrollments">
+      <EntityTypeMapping TypeName="dbModel.Enrollment">
+        <MappingFragment StoreEntitySet="Enrollment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="cid" ColumnName="cid" />
+          <ScalarProperty Name="notifications" ColumnName="notifications" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Requests">
+      <EntityTypeMapping TypeName="dbModel.Request">
+        <MappingFragment StoreEntitySet="Requests">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="cid" ColumnName="cid" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="dbModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
