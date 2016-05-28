@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="dbModelStoreContainer">
+    <EntitySet Name="Activity" EntityType="dbModel.Store.Activity" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Class" EntityType="dbModel.Store.Class" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Comments" EntityType="dbModel.Store.Comments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Enrollment" EntityType="dbModel.Store.Enrollment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Requests" EntityType="dbModel.Store.Requests" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="dbModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="fk1" Association="dbModel.Store.fk1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Class" EntitySet="Class" />
+    </AssociationSet>
+    <AssociationSet Name="fk2" Association="dbModel.Store.fk2">
+      <End Role="User" EntitySet="User" />
+      <End Role="Enrollment" EntitySet="Enrollment" />
+    </AssociationSet>
+    <AssociationSet Name="fk3" Association="dbModel.Store.fk3">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="Enrollment" EntitySet="Enrollment" />
+    </AssociationSet>
+    <AssociationSet Name="fk4" Association="dbModel.Store.fk4">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="Activity" EntitySet="Activity" />
+    </AssociationSet>
+    <AssociationSet Name="fk5" Association="dbModel.Store.fk5">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="Requests" EntitySet="Requests" />
+    </AssociationSet>
+    <AssociationSet Name="fk6" Association="dbModel.Store.fk6">
+      <End Role="User" EntitySet="User" />
+      <End Role="Requests" EntitySet="Requests" />
+    </AssociationSet>
+    <AssociationSet Name="fk7" Association="dbModel.Store.fk7">
+      <End Role="User" EntitySet="User" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="fk8" Association="dbModel.Store.fk8">
+      <End Role="Activity" EntitySet="Activity" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Activity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="cid" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="type" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="time_deadline" Type="varchar" MaxLength="50" />
+    <Property Name="submission_date" Type="varchar" MaxLength="50" />
+    <Property Name="desc" Type="varchar(max)" Nullable="false" />
+    <Property Name="file_url" Type="varbinary(max)" />
+    <Property Name="heading" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="create_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="instructor" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" Nullable="false" />
+    <Property Name="institution" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="dept" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="desc" Type="varchar(max)" Nullable="false" />
+    <Property Name="created" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="uid" Type="int" Nullable="false" />
+    <Property Name="act" Type="int" Nullable="false" />
+    <Property Name="comment" Type="varchar(max)" Nullable="false" />
+    <Property Name="created" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Enrollment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="uid" Type="int" Nullable="false" />
+    <Property Name="cid" Type="int" Nullable="false" />
+    <Property Name="notifications" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Requests">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="cid" Type="int" Nullable="false" />
+    <Property Name="uid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="lname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="type" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="password" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="fk1">
+    <End Role="User" Type="dbModel.Store.User" Multiplicity="1" />
+    <End Role="Class" Type="dbModel.Store.Class" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Class">
+        <PropertyRef Name="instructor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk2">
+    <End Role="User" Type="dbModel.Store.User" Multiplicity="1" />
+    <End Role="Enrollment" Type="dbModel.Store.Enrollment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Enrollment">
+        <PropertyRef Name="uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk3">
+    <End Role="Class" Type="dbModel.Store.Class" Multiplicity="1" />
+    <End Role="Enrollment" Type="dbModel.Store.Enrollment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Enrollment">
+        <PropertyRef Name="cid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk4">
+    <End Role="Class" Type="dbModel.Store.Class" Multiplicity="1" />
+    <End Role="Activity" Type="dbModel.Store.Activity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Activity">
+        <PropertyRef Name="cid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk5">
+    <End Role="Class" Type="dbModel.Store.Class" Multiplicity="1" />
+    <End Role="Requests" Type="dbModel.Store.Requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Requests">
+        <PropertyRef Name="cid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk6">
+    <End Role="User" Type="dbModel.Store.User" Multiplicity="1" />
+    <End Role="Requests" Type="dbModel.Store.Requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Requests">
+        <PropertyRef Name="uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk7">
+    <End Role="User" Type="dbModel.Store.User" Multiplicity="1" />
+    <End Role="Comments" Type="dbModel.Store.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk8">
+    <End Role="Activity" Type="dbModel.Store.Activity" Multiplicity="1" />
+    <End Role="Comments" Type="dbModel.Store.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="act" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
